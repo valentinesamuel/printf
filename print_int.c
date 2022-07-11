@@ -2,7 +2,7 @@
 
 /**
  * print_int - prints integers entered in the printf
- * @i: interger
+ * @i: the interger
  * Return: integer
  */
 int print_int (va_list i)
