@@ -17,5 +17,6 @@ int print_dec(va_list d);
 int print_rev(va_list r);
 int print_percent(va_list p);
 int print_bin(va_list b);
+int print_unsig(va_list u);
 
 #endif
