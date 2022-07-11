@@ -2,7 +2,7 @@
 
 /**
  * print_bin - prints binary in printf function
- * @b: binary passed in
+ * @b: binary passed in function
  * Return: count of what is printed
  */
 int print_bin(va_list b)
