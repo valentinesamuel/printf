@@ -15,3 +15,4 @@ int (*get_format_function(char format))(va_list)
 	{"d", print_dec},
 	{"r", print_rev},
 	{"b", print_bin},
+	}
