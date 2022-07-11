@@ -2,7 +2,7 @@
 
 /**
  * print_dec - prints decimal numbers in printf
- * @d: decimal integer
+ * @d: decimal integers
  * Return: number of intergers printed
  */
 
