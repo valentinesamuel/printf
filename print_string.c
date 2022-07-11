@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
 /**
- * print_string - prints a string
+ * print_string - prints a string input
  * @s: string passed in printf
  * Return: number of chars in string
  */
