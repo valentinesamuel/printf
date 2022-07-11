@@ -2,7 +2,7 @@
 
 /**
 * _printf - main function that prints to the standard output
-* @format: array to print and check type
+* @format: array to print and check input type
 * Return: number of character printed
 **/
 
