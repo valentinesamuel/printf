@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 				{
 					op = get_format_function(format[i + 1]);
 					if (op != NULL)
-						count += op(listofaruguments)
+						count += op(listofarguments);
 					else
 						count += _putchar(format[i]) + _putchar(format[i + 1]);
 					i++;
