@@ -1,10 +1,9 @@
-/*#include "main.h"*/
+#include "main.h"
 #define NULL 0
 
 /**
  * is_printable - checks if a character is printable
  * @c: character to check
- *
  * Return: 1 if printable, 0 otherwise
  */
 int is_printable(char c)
@@ -19,7 +18,6 @@ int is_printable(char c)
 /**
  * _isalpha - checks if character is alpha or not
  * @c: character to check
- *
  * Return: 1 if is alpha, 0 otherwise
  */
 int _isalpha(char c)
