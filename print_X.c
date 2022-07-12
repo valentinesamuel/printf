@@ -1,4 +1,4 @@
-/*#include "main.h"*/
+#include "main.h"
 
 /**
  * print_X - prints a hexadecimal in upper case
