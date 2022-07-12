@@ -6,26 +6,32 @@
  */
 int print_upper_string(va_list S)
 {
-	unsigned int i;
-	int count = 0;
-	char *str = va_arg(S, char *);
+	char *s;
+	char hex[17] = "0123456789ABCDEF";
+	int total = 0, i = 0, c = 0;
 
-	if (str == NULL)
-		str = "(null)";
-	for (i = 0; str[i]; i++)
+	(void)hex;
+	s = va_arg(S, char *);
+
+	while (s[i])
 	{
-		if (str[i] < 32 || str[i] >= 127)
+		if (((s[i] >= 0) && (s[i] < 32)) || (s[i] >= 127))
 		{
-			_putchar('\\');
-			_putchar('x');
-			count += 2;
-			count += hex_print(str[i]);
+			total += _putchar('\\');
+			total += _putchar('x');
+			if (s[i] < 16)
+			{
+				total += _putchar('0');
+				c = s[i] - '0';
+				total += _putchar(hex[c]);
+			}
 		}
 		else
 		{
-			_putchar(str[i]);
-			count++;
+			_putchar(s[i]);
+			total++;
 		}
 	}
-	return (count);
+
+	return (total);
 }
