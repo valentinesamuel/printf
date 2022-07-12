@@ -1,8 +1,10 @@
 #include "main.h"
 /**
  * print_char - prints characters in printf funct
- * @c - the character
+ * @c: the character
  * Return: char in function
  */
 int print_char(va_list c)
-
+{
+	return (_putchar(va_arg(c, int)));
+}
