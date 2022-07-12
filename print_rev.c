@@ -7,14 +7,17 @@
  */
 int print_rev(va_list r)
 {
-	int i;
-	int length;
+	int i = 0;
+	int length = 0;
 	char *str;
 
 	str = va_arg(r, char *);
-	length = _strlen(str);
-
-	if (str == NULL)
+	while (str[length])
+		length++;
+	while ((length - i - 1) >= 0)
 	{
-		str = "(null)";
+		_putchar(str[length - i - 1]);
+		i++;
 	}
+	return (i);
+}
