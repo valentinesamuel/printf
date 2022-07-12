@@ -21,3 +21,28 @@ int _printf(const char *format, ...)
 		{
 			return (-1);
 		}
+		for (i = 0; format[i] != '\0'; i++)
+		{
+			if (format[i] == '%')
+			{
+				if (format[i + 1] == '\0')
+				{
+					count += _putchar(format[i]);
+					i++;
+				}
+				else if (format[i + 1] != '\0')
+				{
+					op = get_format_function(format[i + 1]);
+					count += (op ? op(listofarguments) : _putchar(format[i]) + _putchar(format[i + 1]));
+					i++;
+				}
+			}
+			else
+			{
+				count += _putchar(format[i]);
+			}
+		}
+		va_end(listofarguments);
+	}
+	return (count);
+}
