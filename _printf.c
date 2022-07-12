@@ -18,9 +18,7 @@ int _printf(const char *format, ...)
 
 		va_start(listofarguments, format);
 		if (format[0] == '%' && format[1] == '\0')
-		{
 			return (-1);
-		}
 		for (i = 0; format[i] != '\0'; i++)
 		{
 			if (format[i] == '%')
@@ -33,14 +31,15 @@ int _printf(const char *format, ...)
 				else if (format[i + 1] != '\0')
 				{
 					op = get_format_function(format[i + 1]);
-					count += (op ? op(listofarguments) : _putchar(format[i]) + _putchar(format[i + 1]));
+					if (op != NULL)
+						count += op(listofaruguments)
+					else
+						count += _putchar(format[i]) + _putchar(format[i + 1]);
 					i++;
 				}
 			}
 			else
-			{
 				count += _putchar(format[i]);
-			}
 		}
 		va_end(listofarguments);
 	}
