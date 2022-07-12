@@ -8,38 +8,26 @@
 
 int print_octal(va_list o)
 {
-	unsigned int num = va_arg(o, unsigned int);
-	unsigned int copy;
-	char *octa;
-	int i, j = 0, charPrinted = 0;
+	unsigned int a[11];
+	unsigned int i, m, n, sum;
+	int count;
 
-	if (num == 0)
-		return (_putchar('0'));
-	for (copy = num; copy != 0; j++)
+	n = va_arg(o, unsigned int);
+	m = 1073741824; /* (8 ^ 10) */
+	a[0] = n / m;
+	for (i = 1; i < 11; i++)
 	{
-		copy = copy / 8;
+		m /= 8;
+		a[i] = (n / m) % 8;
 	}
-	octa = malloc(j);
-	if (!octa)
+	for (i = 0, sum = 0, count = 0; i < 11; i++)
 	{
-		free(octa);
-		return (-1);
+		sum += a[i];
+		if (sum || i == 10)
+		{
+			_putchar('0' + a[i]);
+			count++;
+		}
 	}
-	for (i = j - 1; i >= 0; i--)
-	{
-		octa[i] = num % 8 + '0';
-		num = num / i;
-	}
-	i = 0;
-	while (i < j && octa[i] == '0')
-	{
-		i++;
-	}
-	for (; i < j; i++)
-	{
-		_putchar(octa[i]);
-		charPrinted++;
-	}
-	free(octa);
-	return (charPrinted);
+	return (count);
 }
