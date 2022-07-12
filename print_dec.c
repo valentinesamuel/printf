@@ -24,3 +24,17 @@ int print_dec(va_list d)
 	{
 		absolutenum = numbers;
 	}
+	auxnumber = absolutenum;
+	zerocount = 1;
+	while (auxnumber > 9)
+	{
+		auxnumber /= 10;
+		zerocount *= 10;
+	}
+	while (zerocount >= 1)
+	{
+		count += _putchar(((absolutenum / zerocount) % 10) + '0');
+		zerocount /= 10;
+	}
+	return (count);
+}
