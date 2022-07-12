@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_unsig - print unsigned integers
+ * print_unsig - print unsigned integers in function
  * @u: variadic list
  * Return: output count
  */
