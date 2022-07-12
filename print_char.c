@@ -2,9 +2,12 @@
 /**
  * print_char - prints characters in printf funct
  * @c: the character
- * Return: char in function
+ * Return: 1
  */
 int print_char(va_list c)
 {
-	return (_putchar(va_arg(c, int)));
+	char ch = (char)va_arg(c, int);
+
+	_putchar(ch);
+	return (1);
 }

@@ -7,20 +7,14 @@
 
 int print_string(va_list s)
 {
-	int i;
+	int count;
 	char *str = va_arg(s, char *);
 
 	if (str == NULL)
-	{
 		str = "(null)";
-	}
-	else if (*str == '\0')
+	for (count = 0; str[count]; count++)
 	{
-		return (-1);
+		_putchar(str[count]);
 	}
-	for (i = 0; str[i]; i++)
-	{
-		_putchar(str[i]);
-	}
-	return (i);
+	return (count);
 }
