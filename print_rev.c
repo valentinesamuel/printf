@@ -2,7 +2,7 @@
 
 /**
  * print_rev - prints in reverse
- * @r: input to print in rev
+ * @r: input to print in reverse
  * Return: the output count
  */
 int print_rev(va_list r)
