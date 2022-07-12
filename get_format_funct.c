@@ -1,5 +1,4 @@
 #include "main.h"
-#define NULL 0
 /**
 * get_format_function - search and return the correct function
 * @format: array to check

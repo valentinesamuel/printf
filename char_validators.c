@@ -1,5 +1,4 @@
 #include "main.h"
-#define NULL 0
 
 /**
  * is_printable - checks if a character is printable
