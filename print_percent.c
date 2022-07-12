@@ -1,4 +1,4 @@
-#include "main.h"i
+#include "main.h"
 
 /**
  * print_percent - prints percent input
@@ -8,9 +8,5 @@
 
 int print_percent(va_list p)
 {
-	char *str;
-	int count = 0;
-
-	str = malloc(2);
-	if (str == NULL)
-	{
+	return (_putchar(va_arg(p, int)));
+}
