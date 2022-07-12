@@ -19,3 +19,22 @@ int print_bin(va_list b)
 		count++;
 		return (count);
 	}
+	else
+	{
+		while (num > 0)
+		{
+			binary = num % 2;
+			num /= 2;
+			arr[count] = binary;
+			count++;
+		}
+		i = count - 1;
+		while (i > 0)
+		{
+			_putchar(arr[i] + '0');
+			i--;
+		}
+		_putchar('0' + arr[i]);
+	}
+	return (count);
+}
