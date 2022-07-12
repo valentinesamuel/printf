@@ -8,5 +8,4 @@
 int print_int (va_list i)
 {
 	return (print_dec(i));
-
-
+}
