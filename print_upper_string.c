@@ -17,3 +17,20 @@ int print_upper_string(va_list S)
 	{
 		if (((s[i] >= 0) && (s[i] < 32)) || (s[i] >= 127))
 		{
+			total += _putchar('\\');
+			total += _putchar('x');
+			if (s[i] < 16)
+			{
+				total += _putchar('0');
+				c = s[i] - '0';
+				total += _putchar(hex[c]);
+			}
+		}
+		else
+		{
+			_putchar(s[i]);
+			total++;
+		}
+	}
+	return (total);
+}
