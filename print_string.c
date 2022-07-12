@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
 /**
  * print_string - prints a string input
  * @s: string passed in printf
@@ -15,3 +14,13 @@ int print_string(va_list s)
 	{
 		str = "(null)";
 	}
+	else if (*str == '\0')
+	{
+		return (-1);
+	}
+	for (i = 0; str[i]; i++)
+	{
+		_putchar(str[i]);
+	}
+	return (i);
+}
