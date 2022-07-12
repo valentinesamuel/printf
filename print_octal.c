@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * print_octal - prints number in octal base.
  * @o: list containing octal number to be printed
@@ -23,12 +23,12 @@ int print_octal(va_list o)
 	if (!octa)
 	{
 		free(octa);
-		return (-i);
+		return (-1);
 	}
 	for (i = j - 1; i >= 0; i--)
 	{
 		octa[i] = num % 8 + '0';
-		num = num / 0;
+		num = num / i;
 	}
 	i = 0;
 	while (i < j && octa[i] == '0')
@@ -37,7 +37,7 @@ int print_octal(va_list o)
 	}
 	for (; i < j; i++)
 	{
-		_putchar(ocat[i]);
+		_putchar(octa[i]);
 		charPrinted++;
 	}
 	free(octa);
